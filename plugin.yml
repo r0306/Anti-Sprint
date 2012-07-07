@@ -1,0 +1,30 @@
+name: Anti-Sprint
+version: 1.0.0
+main: com.github.r0306.AntiSprint.AntiSprint
+commands:
+  antisprint:
+    description: Shows plugin information.
+    usage: /<command>
+  antisprint toggle:
+    description: Enables and disables the plugin's anti-sprint feature.
+    usage: /<command>
+  antisprint setfood <amount>:
+    description: Sets minimum food required in order to sprint. Set to 21 to disallow all sprinting.
+    usage: /<command>
+  antisprint allow <player>:
+    description: Enables sprinting for the given player.
+    usage: /<command>
+  antisprint disallow <player>:
+    description: Disables sprinting for the given player.
+    usage: /<command>
+permissions:
+    antisprint.*:
+        description: Gives access to all PVP bypasses and AntiRelog commands.
+        children:
+            antirelog.pvpbypass: true
+    antisprint.bypass:
+        description: Players who have this node can bypass sprint restrictions.
+        default: op
+    antisprint.configure:
+        description: Allows players to configure the settings.
+        default: op
